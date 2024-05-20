@@ -105,6 +105,30 @@ export default function Home() {
     );
   };
   
+    const [averageGrade, setAverageGrade] = useState(0);
+    const [chhalikhask, setchhalikhask] = useState(0);
+
+   
+
+    // Calculate the average grade
+    const calculatedAverage =
+      rows.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.result;
+      }, 0) / 22;
+
+    // Set the calculated average grade to state
+    useEffect(() => {
+      setAverageGrade(calculatedAverage);
+    }, [calculatedAverage]);
+
+    // Calculate the chhalikhask
+    const calculateChhalikhask =() => {
+      return  ( (10 - averageGrade) * 22) 
+      
+    }
+    useEffect(() => {
+      setchhalikhask(calculateChhalikhask)},[calculateChhalikhask]);
+
   useEffect(() => {
     const calculateResults = () => {
       setRows((prevRows) =>
@@ -151,7 +175,7 @@ export default function Home() {
   return (
     <>
       {/* Web application to calculate the average of the semester */}
-     
+
       <div className="border rounded-lg w-full">
         <div className="relative w-full overflow-auto">
           <Table>
@@ -212,11 +236,30 @@ export default function Home() {
             </TableBody>
           </Table>
           <h1 className="text-xl font-bold mt-4">
-            Moyenne general:{" "}
-            {rows.reduce((accumulator, currentValue) => {
-              return accumulator + currentValue.result;
-            }, 0) / 22}
+            Moyenne générale: {averageGrade.toFixed(2)}
           </h1>
+          <h1 className="text-xl font-bold mt-4">
+            chhal ikhask f total : {Math.round(chhalikhask)}
+          </h1>
+
+          <div className="">
+            <h1>
+              chhal ikhask Chimie org : {Math.round(chhalikhask * 4) / 3}{" "}
+            </h1>
+            <h1>
+              chhal ikhask chimie générale : {Math.round(chhalikhask * 4) / 3}{" "}
+            </h1>
+            <h1>chhal ikhask Biologie : {Math.round(chhalikhask * 4) / 3} </h1>
+            <h1>chhal ikhask Anatomie : {Math.round(chhalikhask * 4) / 2} </h1>
+            <h1>chhal ikhask Physio : {Math.round(chhalikhask * 4) / 2} </h1>
+            <h1>chhal ikhask Botanique : {Math.round(chhalikhask * 4) / 2} </h1>
+            <h1>
+              chhal ikhask Biophysique : {Math.round(chhalikhask * 4) / 2}{" "}
+            </h1>
+            <h1>chhal ikhask Français : {Math.round(chhalikhask * 4) / 1} </h1>
+            <h1>chhal ikhask Histoire : {Math.round(chhalikhask * 4) / 1} </h1>
+            <h1>chhal ikhask Math : {Math.round(chhalikhask * 4) / 3} </h1>
+          </div>
         </div>
       </div>
     </>
