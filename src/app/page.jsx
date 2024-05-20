@@ -181,7 +181,7 @@ export default function Home() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead> © moumen.mz </TableHead>
+                <TableHead> © good luck everyone </TableHead>
                 <TableHead>1EMD</TableHead>
                 <TableHead>2EMD</TableHead>
                 <TableHead>3EMD</TableHead>
