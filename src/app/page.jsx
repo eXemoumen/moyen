@@ -244,21 +244,21 @@ export default function Home() {
 
           <div className="">
             <h1>
-              chhal ikhask Chimie org : {Math.round(chhalikhask * 4) / 3}{" "}
+              chhal ikhask Chimie org : {Math.round(chhalikhask * 3) / 3}{" "}
             </h1>
             <h1>
-              chhal ikhask chimie générale : {Math.round(chhalikhask * 4) / 3}{" "}
+              chhal ikhask chimie générale : {Math.round(chhalikhask * 2) / 3}{" "}
             </h1>
             <h1>chhal ikhask Biologie : {Math.round(chhalikhask * 4) / 3} </h1>
-            <h1>chhal ikhask Anatomie : {Math.round(chhalikhask * 4) / 2} </h1>
-            <h1>chhal ikhask Physio : {Math.round(chhalikhask * 4) / 2} </h1>
-            <h1>chhal ikhask Botanique : {Math.round(chhalikhask * 4) / 2} </h1>
+            <h1>chhal ikhask Anatomie : {Math.round(chhalikhask * 2) / 2} </h1>
+            <h1>chhal ikhask Physio : {Math.round(chhalikhask * 2) / 2} </h1>
+            <h1>chhal ikhask Botanique : {Math.round(chhalikhask * 3) / 2} </h1>
             <h1>
-              chhal ikhask Biophysique : {Math.round(chhalikhask * 4) / 2}{" "}
+              chhal ikhask Biophysique : {Math.round(chhalikhask * 3) / 2}{" "}
             </h1>
-            <h1>chhal ikhask Français : {Math.round(chhalikhask * 4) / 1} </h1>
-            <h1>chhal ikhask Histoire : {Math.round(chhalikhask * 4) / 1} </h1>
-            <h1>chhal ikhask Math : {Math.round(chhalikhask * 4) / 3} </h1>
+            <h1>chhal ikhask Français : {Math.round(chhalikhask * 1) / 1} </h1>
+            <h1>chhal ikhask Histoire : {Math.round(chhalikhask * 1) / 1} </h1>
+            <h1>chhal ikhask Math : {Math.round(chhalikhask * 2) / 3} </h1>
           </div>
         </div>
       </div>
